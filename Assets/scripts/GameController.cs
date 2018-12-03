@@ -35,4 +35,8 @@ public class GameController : MonoBehaviour {
     {
         tCPReceiver.SendMsg("thread|" + clientId);
     }
+    public void SendDone()
+    {
+        tCPSender.SendMsg("done");
+    }
 }

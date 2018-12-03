@@ -68,6 +68,8 @@ public class TCPReceiver : MonoBehaviour
                         string[] msgSemgents = serverMessage.Split('|');
                         handleMsg(msgSemgents, serverMessage);
                     }
+                    gameController.SendDone();
+                    Application.Quit();
                 }
             }
         }
